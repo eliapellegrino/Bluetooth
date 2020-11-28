@@ -2,7 +2,7 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="809" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../main.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="811" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../main.c" useHWbreakpoint="false"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
@@ -24,6 +24,7 @@
   <ProjectSessionItem path="Central_pca10056"/>
   <ProjectSessionItem path="Central_pca10056;Central_pca10056"/>
   <ProjectSessionItem path="Central_pca10056;Central_pca10056;Application"/>
+  <ProjectSessionItem path="Central_pca10056;Central_pca10056;my_library"/>
   <ProjectSessionItem path="Central_pca10056;Central_pca10056;nRF_Libraries"/>
   <ProjectSessionItem path="Central_pca10056;Central_pca10056;nRF_SoftDevice"/>
  </Project>
@@ -58,12 +59,8 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="214" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="199" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="227" useTextEdit="1" openedFrom="C:/Users/eliap/Desktop/Tesi/Firmware/Segger/nRF52840/nRF5SDK17009/nRF5_SDK_17.0.0/examples/Miei Esempi_Ble/CENTRAL/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_ble.c" selected="0" top="216" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="631" useTextEdit="1" openedFrom="C:/Users/eliap/Desktop/Tesi/Firmware/Segger/nRF52840/nRF5SDK17009/nRF5_SDK_17.0.0/examples/Miei Esempi_Ble/CENTRAL/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s140/headers/ble.h" selected="0" top="618" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="89" useTextEdit="1" openedFrom="C:/Users/eliap/Desktop/Tesi/Firmware/Segger/nRF52840/nRF5SDK17009/nRF5_SDK_17.0.0/examples/Miei Esempi_Ble/CENTRAL/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/ble/nrf_ble_scan/nrf_ble_scan.h" selected="0" top="76" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="89" codecName=""/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="42" y="2035" useTextEdit="1" openedFrom="C:/Users/eliap/Desktop/Tesi/Firmware/Segger/nRF52840/nRF5SDK17009/nRF5_SDK_17.0.0/examples/Miei Esempi_Ble/CENTRAL/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s140/headers/ble_gap.h" selected="0" top="2022" codecName=""/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="51" y="116" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="13" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="11545" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="11524" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="Central_pca10056" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <ARMCrossStudioWindow activeProject="Central_pca10056" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

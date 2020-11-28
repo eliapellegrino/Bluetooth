@@ -15,7 +15,7 @@ Once the notification for the custom UUID is activate, the CENTRAL start receivi
 2) Notification off
 3) Write a value on custom caracheteristic (not used)
 
-#LED
+# LED
 1)	ON: configuration completed, starts scanning
 	OFF:	configuration not completed
 2)	ON:		Connected to peer
