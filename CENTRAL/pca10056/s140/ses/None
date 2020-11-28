@@ -1,0 +1,407 @@
+T33E4 8896:006.144   SEGGER J-Link V6.82c Log File
+T33E4 8896:006.144   DLL Compiled: Jul 31 2020 17:37:02
+T33E4 8896:006.144   Logging started @ 2020-11-25 17:03
+T33E4 8896:006.144 - 6806.885ms
+T33E4 8896:006.144 JLINK_ExecCommand("EnableAutoUpdateFW", ...). 
+T33E4 8896:006.144 - 0.011ms returns 0x00
+T33E4 8896:006.144 JLINK_OpenEx(...)
+T33E4 8896:009.216   Looking for J-Link GUI Server exe at: C:\Program Files\SEGGER\SEGGER Embedded Studio for ARM 5.10a\bin\JLinkGUIServer.exe
+T33E4 8896:009.216   Looking for J-Link GUI Server exe at: C:\Program Files (x86)\SEGGER\JLink\JLinkGUIServer.exe
+T33E4 8896:009.216   Forking J-Link GUI Server: C:\Program Files (x86)\SEGGER\JLink\JLinkGUIServer.exe
+T33E4 8896:136.192   J-Link GUI Server info: "J-Link GUI server V6.84a "
+T33E4 8898:788.352   Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Mar 17 2020 14:43:00
+T33E4 8898:790.400   Hardware: V1.00
+T33E4 8898:790.400   S/N: 683710585
+T33E4 8898:790.400   OEM: SEGGER
+T33E4 8898:790.400   Feature(s): RDI, FlashBP, FlashDL, JFlash, GDB
+T33E4 8898:791.424   TELNET listener socket opened on port 19021
+T33E4 8898:797.568   WEBSRV Starting webserver
+T33E4 8898:797.568   WEBSRV Webserver running on local port 19080
+T33E4 8898:797.568 - 2790.741ms returns "O.K."
+T33E4 8898:797.568 JLINK_GetEmuCaps()
+T33E4 8898:797.568 - 0.014ms returns 0xB8EA5A33
+T33E4 8898:797.568 JLINK_GetFirmwareString(...)
+T33E4 8898:797.568 - 0.020ms
+T33E4 8898:798.592 JLINK_GetDLLVersion()
+T33E4 8898:798.592 - 0.013ms returns 68203
+T33E4 8898:798.592 JLINK_GetHardwareVersion()
+T33E4 8898:798.592 - 0.012ms returns 10000
+T33E4 8898:798.592 JLINK_GetHWStatus(...)
+T33E4 8898:798.592 - 0.254ms returns 0
+T33E4 8898:798.592 JLINK_GetSN()
+T33E4 8898:798.592 - 0.014ms returns 683710585
+T33E4 8898:799.616 JLINK_ExecCommand("ProjectFile = "C:/Users/eliap/Desktop/Tesi/Firmware/Segger/nRF52840/nRF5SDK17009/nRF5_SDK_17.0.0/examples/Miei Esempi_Ble/CENTRAL/pca10056/s140/ses/Central_pca10056_Debug.jlink"", ...). 
+T33E4 8898:805.760 - 6.600ms returns 0x00
+T33E4 8898:805.760 JLINK_EMU_GetCurrConnectionInfo()
+T33E4 8898:805.760 - 0.012ms returns 0
+T33E4 8898:805.760 JLINK_DEVICE_GetIndex(sDeviceName = nRF52840_xxAA)
+T33E4 8898:805.760 - 0.047ms returns 2222
+T33E4 8898:805.760 JLINK_ExecCommand("device = nRF52840_xxAA", ...). 
+T33E4 8898:806.784   Device "NRF52840_XXAA" selected.
+T33E4 8898:811.904 - 7.078ms returns 0x00
+T33E4 8898:812.928 JLINK_DEVICE_GetIndex(sDeviceName = nRF52840_xxAA)
+T33E4 8898:812.928 - 0.055ms returns 2222
+T33E4 8898:812.928 JLINK_DEVICE_GetInfo(DeviceIndex = 2222)
+T33E4 8898:812.928 - 0.011ms returns 0
+T33E4 8898:812.928 JLINK_GetEmuCaps()
+T33E4 8898:812.928 - 0.011ms returns 0xB8EA5A33
+T33E4 8898:812.928 JLINK_TIF_GetAvailable(...)
+T33E4 8898:812.928 - 0.326ms
+T33E4 8898:812.928 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T33E4 8898:813.952 - 0.913ms returns 0x00
+T33E4 8898:813.952 JLINK_GetEmuCaps()
+T33E4 8898:813.952 - 0.011ms returns 0xB8EA5A33
+T33E4 8898:813.952 JLINK_SWO_Control(JLINKARM_SWO_CMD_GET_SPEED_INFO, ...)
+T33E4 8898:814.976 - 0.329ms returns 0x00
+T33E4 8898:814.976 JLINK_SetEndian(ARM_ENDIAN_LITTLE)
+T33E4 8898:814.976 - 0.011ms returns 0
+T33E4 8898:814.976 JLINK_GetEmuCaps()
+T33E4 8898:814.976 - 0.010ms returns 0xB8EA5A33
+T33E4 8898:814.976 JLINK_SetSpeed(4000)
+T33E4 8898:814.976 - 0.141ms
+T33E4 8898:814.976 JLINK_GetSpeed()
+T33E4 8898:814.976 - 0.011ms returns 1000
+T33E4 8898:814.976 JLINK_Connect()
+T33E4 8898:814.976   InitTarget() start
+T33E4 8898:814.976    J-Link Script File: Executing InitTarget()
+T33E4 8898:819.072   InitTarget() end
+T33E4 8898:820.096   Found SW-DP with ID 0x2BA01477
+T33E4 8898:821.120   DPIDR: 0x2BA01477
+T33E4 8898:822.144   Scanning AP map to find all available APs
+T33E4 8898:823.168   AP[2]: Stopped AP scan as end of AP map has been reached
+T33E4 8898:823.168   AP[0]: AHB-AP (IDR: 0x24770011)
+T33E4 8898:824.192   AP[1]: JTAG-AP (IDR: 0x02880000)
+T33E4 8898:824.192   Iterating through AP map to find AHB-AP to use
+T33E4 8898:824.192   AP[0]: Core found
+T33E4 8898:824.192   AP[0]: AHB-AP ROM base: 0xE00FF000
+T33E4 8898:825.216   CPUID register: 0x410FC241. Implementer code: 0x41 (ARM)
+T33E4 8898:826.240   Found Cortex-M4 r0p1, Little endian.
+T33E4 8898:926.592   -- Max. mem block: 0x000042F0
+T33E4 8898:926.592   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8898:927.616   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T33E4 8898:928.640   CPU_ReadMem(4 bytes @ 0xE0002000)
+T33E4 8898:929.664   FPUnit: 6 code (BP) slots and 2 literal slots
+T33E4 8898:929.664   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T33E4 8898:930.688   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T33E4 8898:930.688   CPU_ReadMem(4 bytes @ 0xE0001000)
+T33E4 8898:930.688   CPU_WriteMem(4 bytes @ 0xE0001000)
+T33E4 8898:932.736   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T33E4 8898:933.760   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T33E4 8898:934.784   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T33E4 8898:934.784   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T33E4 8898:935.808   CoreSight components:
+T33E4 8898:936.832   ROMTbl[0] @ E00FF000
+T33E4 8898:936.832   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T33E4 8898:938.880   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T33E4 8898:939.904   ROMTbl[0][0]: E000E000, CID: B105E00D, PID: 000BB00C SCS-M7
+T33E4 8898:939.904   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T33E4 8898:941.952   ROMTbl[0][1]: E0001000, CID: B105E00D, PID: 003BB002 DWT
+T33E4 8898:941.952   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T33E4 8898:942.976   ROMTbl[0][2]: E0002000, CID: B105E00D, PID: 002BB003 FPB
+T33E4 8898:942.976   CPU_ReadMem(32 bytes @ 0xE0000FE0)
+T33E4 8898:945.024   ROMTbl[0][3]: E0000000, CID: B105E00D, PID: 003BB001 ITM
+T33E4 8898:945.024   CPU_ReadMem(32 bytes @ 0xE0040FE0)
+T33E4 8898:947.072   ROMTbl[0][4]: E0040000, CID: B105900D, PID: 000BB9A1 TPIU
+T33E4 8898:947.072   CPU_ReadMem(32 bytes @ 0xE0041FE0)
+T33E4 8898:948.096   ROMTbl[0][5]: E0041000, CID: B105900D, PID: 000BB925 ETM
+T33E4 8898:948.096 - 133.270ms returns 0x00
+T33E4 8898:948.096 JLINK_GetId()
+T33E4 8898:948.096 - 0.399ms returns 0x2BA01477
+T33E4 8898:948.096 JLINK_GetDebugInfo(0x10E = JLINKARM_DEBUG_INFO_AHBAP_INDEX)
+T33E4 8898:948.096   Value=0x00000000
+T33E4 8898:948.096 - 0.030ms returns 0
+T33E4 8898:948.096 JLINK_GetDebugInfo(0x10C = JLINKARM_DEBUG_INFO_DBG_ADDR_INDEX)
+T33E4 8898:948.096   Value=0xE000EDF0
+T33E4 8898:948.096 - 0.021ms returns 0
+T33E4 8898:948.096 JLINK_GetDebugInfo(0x105 = JLINKARM_DEBUG_INFO_DWT_ADDR_INDEX)
+T33E4 8898:948.096   Value=0xE0001000
+T33E4 8898:948.096 - 0.021ms returns 0
+T33E4 8898:948.096 JLINK_GetDebugInfo(0x106 = JLINKARM_DEBUG_INFO_FPB_ADDR_INDEX)
+T33E4 8898:948.096   Value=0xE0002000
+T33E4 8898:948.096 - 0.021ms returns 0
+T33E4 8898:948.096 JLINK_GetDebugInfo(0x104 = JLINKARM_DEBUG_INFO_ITM_ADDR_INDEX)
+T33E4 8898:948.096   Value=0xE0000000
+T33E4 8898:948.096 - 0.020ms returns 0
+T33E4 8898:948.096 JLINK_CORE_GetFound()
+T33E4 8898:948.096 - 0.010ms returns 0xE0000FF
+T33E4 8898:948.096 JLINK_WriteU32_64(0xE0000FB0, 0xC5ACCE55)
+T33E4 8898:948.096   Debug reg: ITM_LOCKACCESS
+T33E4 8898:948.096   CPU is running
+T33E4 8898:948.096   CPU_WriteMem(4 bytes @ 0xE0000FB0)
+T33E4 8898:950.144 - 1.035ms returns 0 (0x00000000)
+T33E4 8899:938.304 JLINK_IsConnected()
+T33E4 8899:938.304 - 0.039ms returns TRUE
+T33E4 8900:941.824 JLINK_IsConnected()
+T33E4 8900:941.824 - 0.030ms returns TRUE
+T33E4 8901:937.152 JLINK_IsConnected()
+T33E4 8901:937.152 - 0.032ms returns TRUE
+T33E4 8902:937.600 JLINK_IsConnected()
+T33E4 8902:937.600 - 0.031ms returns TRUE
+T33E4 8903:414.784 JLINK_SetResetDelay(0)
+T33E4 8903:414.784 - 0.028ms
+T33E4 8903:414.784 JLINK_Reset()
+T33E4 8903:414.784   CPU is running
+T33E4 8903:414.784   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T33E4 8903:415.808   CPU is running
+T33E4 8903:415.808   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T33E4 8903:416.832   Reset: Halt core after reset via DEMCR.VC_CORERESET.
+T33E4 8903:417.856   Reset: Reset device via AIRCR.SYSRESETREQ.
+T33E4 8903:417.856   CPU is running
+T33E4 8903:417.856   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T33E4 8903:470.080   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8903:471.104   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8903:473.152   CPU is running
+T33E4 8903:473.152   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T33E4 8903:473.152   CPU is running
+T33E4 8903:473.152   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T33E4 8903:480.320   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8903:488.512   CPU_WriteMem(4 bytes @ 0xE0002000)
+T33E4 8903:489.536   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T33E4 8903:489.536   CPU_ReadMem(4 bytes @ 0xE0001000)
+T33E4 8903:490.560 - 76.733ms
+T33E4 8903:490.560 JLINK_IsHalted()
+T33E4 8903:490.560 - 0.012ms returns TRUE
+T33E4 8903:490.560 JLINK_ReadRegs(NumRegs = 20, Indexes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20)
+T33E4 8903:490.560    -- R0=0x00, R1=0x00, R2=0x00, R3=0x00, R4=0x00, R5=0x00, R6=0x00, R7=0x00, R8=0x00, R9=0x00, R10=0x00, R11=0x00, R12=0x00, R13 (SP)=0x20000400, R14=0xFFFFFFFF, R15 (PC)=0xA80, XPSR=0x1000000, MSP=0x20000400, PSP=0x00, CFBP=0x00
+T33E4 8903:490.560 - 0.032ms returns 0x00
+T33E4 8903:490.560 JLINK_ReadMemU32(0xE000ED04, 0x1 Items)
+T33E4 8903:491.584   CPU_ReadMem(4 bytes @ 0xE000ED04)
+T33E4 8903:492.608   Data:  00 00 00 00
+T33E4 8903:492.608 - 1.066ms returns 1 (0x1)
+T33E4 8903:492.608 JLINK_CORE_GetFound()
+T33E4 8903:492.608 - 0.011ms returns 0xE0000FF
+T33E4 8903:493.632 JLINK_EraseChip()
+T33E4 8903:493.632   CPU_ReadMem(4 bytes @ 0xE000ED90)
+T33E4 8903:494.656   CPU_ReadMem(4 bytes @ 0xE000ED94)
+T33E4 8903:496.704    -- --------------------------------------
+T33E4 8903:496.704    -- Start of determining dirty areas
+T33E4 8903:496.704    -- End of determining dirty areas
+T33E4 8903:496.704    -- Start of preparing flash programming
+T33E4 8903:496.704    -- Calculating RAM usage
+T33E4 8903:496.704    -- RAM usage = 9900 Bytes
+T33E4 8903:496.704    -- Preserving CPU registers
+T33E4 8903:496.704    -- Preparing memory
+T33E4 8903:496.704    -- Preparing target
+T33E4 8903:496.704    -- Downloading RAMCode
+T33E4 8903:530.496    -- Preparing RAMCode
+T33E4 8903:538.688    -- Checking target RAM
+T33E4 8903:541.760    -- End of preparing flash programming
+T33E4 8903:544.832    -- CPU speed could not be measured.
+T33E4 8903:544.832    -- Start of erasing chip
+T33E4 8903:732.224    -- End of erasing chip
+T33E4 8903:732.224    -- Start of restoring
+T33E4 8903:732.224    -- Restoring RAMCode
+T33E4 8903:741.440    -- Restore target
+T33E4 8903:741.440    -- Restore memory
+T33E4 8903:741.440    -- Restoring CPU registers
+T33E4 8903:741.440    -- End of restoring
+T33E4 8903:742.464    -- Total time needed: 0.245s (Prepare: 0.048s, Compare: 0.000s, Erase: 0.187s, Program: 0.000s, Verify: 0.000s, Restore: 0.009s)
+T33E4 8903:753.728 - 259.705ms returns 0
+T33E4 8903:940.096 JLINK_IsConnected()
+T33E4 8903:940.096 - 0.030ms returns TRUE
+T33E4 8904:938.496 JLINK_IsConnected()
+T33E4 8904:938.496 - 0.030ms returns TRUE
+T33E4 8905:938.944 JLINK_IsConnected()
+T33E4 8905:938.944 - 0.032ms returns TRUE
+T33E4 8906:938.368 JLINK_IsConnected()
+T33E4 8906:938.368 - 0.034ms returns TRUE
+T33E4 8907:940.864 JLINK_IsConnected()
+T33E4 8907:940.864 - 0.030ms returns TRUE
+T33E4 8908:937.216 JLINK_IsConnected()
+T33E4 8908:937.216 - 0.033ms returns TRUE
+T33E4 8909:940.736 JLINK_IsConnected()
+T33E4 8909:940.736 - 0.033ms returns TRUE
+T33E4 8910:940.160 JLINK_IsConnected()
+T33E4 8910:940.160 - 0.037ms returns TRUE
+T33E4 8911:939.584 JLINK_IsConnected()
+T33E4 8911:939.584 - 0.035ms returns TRUE
+T33E4 8912:951.296 JLINK_IsConnected()
+T33E4 8912:951.296 - 0.033ms returns TRUE
+T33E4 8913:942.528 JLINK_IsConnected()
+T33E4 8913:942.528 - 0.033ms returns TRUE
+T33E4 8914:939.904 JLINK_IsConnected()
+T33E4 8914:939.904 - 0.028ms returns TRUE
+T33E4 8915:941.376 JLINK_IsConnected()
+T33E4 8915:941.376 - 0.028ms returns TRUE
+T33E4 8916:937.728 JLINK_IsConnected()
+T33E4 8916:937.728 - 0.030ms returns TRUE
+T33E4 8917:948.416 JLINK_IsConnected()
+T33E4 8917:948.416 - 0.024ms returns TRUE
+T33E4 8918:943.744 JLINK_IsConnected()
+T33E4 8918:943.744 - 0.024ms returns TRUE
+T33E4 8919:942.144 JLINK_IsConnected()
+T33E4 8919:942.144 - 0.046ms returns TRUE
+T33E4 8920:388.608 JLINK_SetResetDelay(0)
+T33E4 8920:388.608 - 0.025ms
+T33E4 8920:388.608 JLINK_Reset()
+T33E4 8920:388.608   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T33E4 8920:389.632   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T33E4 8920:389.632   Reset: Halt core after reset via DEMCR.VC_CORERESET.
+T33E4 8920:390.656   Reset: Reset device via AIRCR.SYSRESETREQ.
+T33E4 8920:390.656   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T33E4 8920:443.904   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8920:444.928   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8920:446.976   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T33E4 8920:446.976   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T33E4 8920:453.120   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T33E4 8920:461.312   CPU_WriteMem(4 bytes @ 0xE0002000)
+T33E4 8920:463.360   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T33E4 8920:463.360   CPU_ReadMem(4 bytes @ 0xE0001000)
+T33E4 8920:464.384 - 76.485ms
+T33E4 8920:464.384 JLINK_IsHalted()
+T33E4 8920:464.384 - 0.012ms returns TRUE
+T33E4 8920:464.384 JLINK_ReadRegs(NumRegs = 20, Indexes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20)
+T33E4 8920:464.384    -- R0=0x00, R1=0x00, R2=0x00, R3=0x00, R4=0x00, R5=0x00, R6=0x00, R7=0x00, R8=0x00, R9=0x00, R10=0x00, R11=0x00, R12=0x00, R13 (SP)=0xFFFFFFFC, R14=0xFFFFFFFF, R15 (PC)=0xFFFFFFFE, XPSR=0x1000000, MSP=0xFFFFFFFC, PSP=0x00, CFBP=0x00
+T33E4 8920:464.384 - 0.033ms returns 0x00
+T33E4 8920:464.384 JLINK_ReadReg(CycleCnt)
+T33E4 8920:464.384 - 0.011ms returns 0x00000000
+T33E4 8920:464.384 JLINK_ReadMemU32(0xE000ED04, 0x1 Items)
+T33E4 8920:464.384   CPU_ReadMem(4 bytes @ 0xE000ED04)
+T33E4 8920:465.408   Data:  00 00 00 00
+T33E4 8920:465.408 - 0.918ms returns 1 (0x1)
+T33E4 8920:465.408 JLINK_CORE_GetFound()
+T33E4 8920:465.408 - 0.011ms returns 0xE0000FF
+T33E4 8920:512.512 JLINK_BeginDownload(Flags = 0x00000000)
+T33E4 8920:512.512 - 0.029ms
+T33E4 8920:512.512 JLINK_WriteMem(0x00000000, 0xB00 Bytes, ...)
+T33E4 8920:512.512   Data:  00 04 00 20 81 0A 00 00 15 07 00 00 61 0A 00 00 ...
+T33E4 8920:513.536   completely In flash
+T33E4 8920:513.536    -- Read from flash cache (2816 bytes @ 0x00000000)
+T33E4 8920:513.536 - 0.533ms returns 0xB00
+T33E4 8920:516.608 JLINK_WriteMem(0x00001000, 0x19000 Bytes, ...)
+T33E4 8920:516.608   Data:  C8 13 00 20 41 5F 02 00 75 C1 00 00 A7 5E 02 00 ...
+T33E4 8920:516.608   completely In flash
+T33E4 8920:516.608    -- Read from flash cache (102400 bytes @ 0x00001000)
+T33E4 8920:516.608 - 0.433ms returns 0x19000
+T33E4 8920:518.656 JLINK_WriteMem(0x0001A000, 0xC598 Bytes, ...)
+T33E4 8920:518.656   Data:  00 01 00 20 01 20 A0 70 F9 E7 70 B5 FE 4D 01 23 ...
+T33E4 8920:518.656   completely In flash
+T33E4 8920:518.656    -- Read from flash cache (50584 bytes @ 0x0001A000)
+T33E4 8920:518.656 - 0.236ms returns 0xC598
+T33E4 8920:518.656 JLINK_EndDownload()
+T33E4 8920:519.680   CPU_ReadMem(4 bytes @ 0xE000ED90)
+T33E4 8920:520.704   CPU_ReadMem(4 bytes @ 0xE000ED94)
+T33E4 8920:520.704    -- --------------------------------------
+T33E4 8920:520.704   Flash bank @ 0x00000000: Default: L2 verify disabled because algorithm performs L1 verify
+T33E4 8920:520.704    -- Start of determining dirty areas in flash cache
+T33E4 8920:520.704    -- End of determining dirty areas
+T33E4 8920:520.704    -- Start of preparing flash programming
+T33E4 8920:520.704    -- Calculating RAM usage
+T33E4 8920:520.704    -- RAM usage = 9900 Bytes
+T33E4 8920:520.704    -- Preserving CPU registers
+T33E4 8920:520.704    -- Preparing memory
+T33E4 8920:520.704    -- Preparing target
+T33E4 8920:520.704    -- Preserving target RAM temporarily used for programming
+T33E4 8920:650.752    -- Downloading RAMCode
+T33E4 8920:684.544    -- Preparing RAMCode
+T33E4 8920:692.736    -- Not first flash download, checking target RAM skipped
+T33E4 8920:692.736    -- Preparing RAMCode
+T33E4 8920:694.784    -- End of preparing flash programming
+T33E4 8920:696.832    -- CPU speed could not be measured.
+T33E4 8920:696.832    -- Start of comparing flash
+T33E4 8920:696.832    -- CRC check was estimated as fastest method
+T33E4 8920:709.120    -- Comparing range 0x0000 - 0x1FFFF (32 Sectors, 128 KB), using multi-block CRC calculation
+T33E4 8920:725.504    -- CRC does not match for sectors 0-31
+T33E4 8920:726.528    -- Comparing range 0x20000 - 0x26FFF (7 Sectors, 28 KB), using multi-block CRC calculation
+T33E4 8920:733.696    -- CRC does not match for sectors 0-6
+T33E4 8920:733.696    -- End of comparing flash
+T33E4 8920:733.696    -- Start of erasing sectors
+T33E4 8920:733.696    -- End of erasing sectors
+T33E4 8920:733.696    -- Start of flash programming
+T33E4 8920:733.696    -- Programming range 0x00000000 - 0x00007FFF (  8 Sectors, 32 KB)
+T33E4 8921:151.488    -- Programming range 0x00008000 - 0x0000FFFF (  8 Sectors, 32 KB)
+T33E4 8921:627.648    -- Programming range 0x00010000 - 0x00017FFF (  8 Sectors, 32 KB)
+T33E4 8922:101.760    -- Programming range 0x00018000 - 0x0001FFFF (  8 Sectors, 32 KB)
+T33E4 8922:583.040    -- Programming range 0x00020000 - 0x00026FFF (  7 Sectors, 28 KB)
+T33E4 8923:000.832    -- End of flash programming
+T33E4 8923:000.832    -- 0x0000 - 0x26FFF ( 39 Sectors, 156 KB)
+T33E4 8923:000.832    -- Start of restoring
+T33E4 8923:000.832    -- Restoring RAMCode
+T33E4 8923:111.424    -- Restoring target memory
+T33E4 8923:243.520    -- Restore target
+T33E4 8923:243.520    -- Restore memory
+T33E4 8923:243.520    -- Restoring CPU registers
+T33E4 8923:243.520    -- End of restoring
+T33E4 8923:244.544    -- Bank 0 @ 0x00000000: 1 range affected (159744 bytes)
+T33E4 8923:244.544    -- Total: 2.722s (Prepare: 0.175s, Compare: 0.036s, Erase: 0.000s, Program & Verify: 2.368s, Restore: 0.141s)
+T33E4 8923:244.544    -- Program & Verify speed: 65 KB/s
+T33E4 8923:248.640 - 2730.209ms returns 159744 (0x27000)
+T33E4 8923:261.952 JLINK_BeginDownload(Flags = 0x00000000)
+T33E4 8923:261.952 - 0.032ms
+T33E4 8923:261.952 JLINK_WriteMem(0x00027000, 0x105D2 Bytes, ...)
+T33E4 8923:261.952   Data:  00 00 04 20 75 73 02 00 5D 73 02 00 5F 73 02 00 ...
+T33E4 8923:261.952   completely In flash
+T33E4 8923:261.952    -- Read from flash cache (67026 bytes @ 0x00027000)
+T33E4 8923:262.976 - 0.328ms returns 0x105D2
+T33E4 8923:267.072 JLINK_WriteMem(0x000375D4, 0x6A0 Bytes, ...)
+T33E4 8923:267.072   Data:  00 10 01 40 11 00 04 00 00 00 00 00 FF 00 00 00 ...
+T33E4 8923:267.072   completely In flash
+T33E4 8923:267.072    -- Read from flash cache (1696 bytes @ 0x000375D4)
+T33E4 8923:267.072 - 0.069ms returns 0x6A0
+T33E4 8923:267.072 JLINK_EndDownload()
+T33E4 8923:267.072   CPU_ReadMem(4 bytes @ 0xE000ED90)
+T33E4 8923:268.096   CPU_ReadMem(4 bytes @ 0xE000ED94)
+T33E4 8923:268.096    -- --------------------------------------
+T33E4 8923:268.096   Flash bank @ 0x00000000: Default: L2 verify disabled because algorithm performs L1 verify
+T33E4 8923:268.096    -- Start of determining dirty areas in flash cache
+T33E4 8923:268.096    -- End of determining dirty areas
+T33E4 8923:269.120    -- Start of preparing flash programming
+T33E4 8923:269.120    -- Calculating RAM usage
+T33E4 8923:269.120    -- RAM usage = 5804 Bytes
+T33E4 8923:269.120    -- Preserving CPU registers
+T33E4 8923:269.120    -- Preparing memory
+T33E4 8923:269.120    -- Preparing target
+T33E4 8923:269.120    -- Preserving target RAM temporarily used for programming
+T33E4 8923:343.872    -- Downloading RAMCode
+T33E4 8923:377.664    -- Preparing RAMCode
+T33E4 8923:389.952    -- Not first flash download, checking target RAM skipped
+T33E4 8923:389.952    -- Preparing RAMCode
+T33E4 8923:392.000    -- End of preparing flash programming
+T33E4 8923:394.048    -- CPU speed could not be measured.
+T33E4 8923:394.048    -- Start of comparing flash
+T33E4 8923:394.048    -- CRC check was estimated as fastest method
+T33E4 8923:407.360    -- Comparing range 0x27000 - 0x37FFF (17 Sectors, 68 KB), using multi-block CRC calculation
+T33E4 8923:417.600    -- CRC does not match for sectors 0-16
+T33E4 8923:417.600    -- End of comparing flash
+T33E4 8923:417.600    -- Start of erasing sectors
+T33E4 8923:417.600    -- End of erasing sectors
+T33E4 8923:417.600    -- Start of flash programming
+T33E4 8923:417.600    -- Programming range 0x00027000 - 0x0002EFFF (  8 Sectors, 32 KB)
+T33E4 8923:905.024    -- Programming range 0x0002F000 - 0x00036FFF (  8 Sectors, 32 KB)
+T33E4 8924:422.144    -- Programming range 0x00037000 - 0x00037FFF (  1 Sector, 4 KB)
+T33E4 8924:486.656    -- End of flash programming
+T33E4 8924:486.656    -- 0x27000 - 0x37FFF ( 17 Sectors, 68 KB)
+T33E4 8924:486.656    -- Start of restoring
+T33E4 8924:486.656    -- Restoring RAMCode
+T33E4 8924:549.120    -- Restoring target memory
+T33E4 8924:626.944    -- Restore target
+T33E4 8924:626.944    -- Restore memory
+T33E4 8924:626.944    -- Restoring CPU registers
+T33E4 8924:626.944    -- End of restoring
+T33E4 8924:627.968    -- Bank 0 @ 0x00000000: 1 range affected (69632 bytes)
+T33E4 8924:627.968    -- Total: 1.358s (Prepare: 0.126s, Compare: 0.023s, Erase: 0.000s, Program & Verify: 1.121s, Restore: 0.087s)
+T33E4 8924:627.968    -- Program & Verify speed: 61 KB/s
+T33E4 8924:633.088 - 1365.903ms returns 69632 (0x11000)
+T33E4 8924:641.280 JLINK_ReadMemU32(0xE000ED08, 0x1 Items)
+T33E4 8924:641.280   CPU_ReadMem(4 bytes @ 0xE000ED08)
+T33E4 8924:641.280   Data:  00 00 00 00
+T33E4 8924:641.280 - 0.592ms returns 1 (0x1)
+T33E4 8924:641.280 JLINK_ReadMemU32(0x00000000, 0x1 Items)
+T33E4 8924:641.280    -- Read from flash cache (4 bytes @ 0x00000000)
+T33E4 8924:641.280   Data:  00 04 00 20
+T33E4 8924:641.280 - 0.034ms returns 1 (0x1)
+T33E4 8924:641.280 JLINK_WriteRegs(NumRegs = 20)
+T33E4 8924:642.304    -- R0=0x00, R1=0x00, R2=0x00, R3=0x00, R4=0x00, R5=0x00, R6=0x00, R7=0x00, R8=0x00, R9=0x00, R10=0x00, R11=0x00, R12=0x00, R13 (SP)=0x20000400, R14=0xFFFFFFFF, R15 (PC)=0x27374, XPSR=0x1000000, MSP=0x20000400, PSP=0x00, CFBP=0x00
+T33E4 8924:642.304 - 0.032ms returns 0
+T33E4 8924:642.304 JLINK_WriteReg(CycleCnt, 0x00000000)
+T33E4 8924:642.304 - 0.012ms returns 0
+T33E4 8924:642.304 JLINK_GoEx(MaxEmulInsts = -1, Flags = 0x01)
+T33E4 8924:642.304   CPU_ReadMem(4 bytes @ 0xE0001000)
+T33E4 8924:643.328   CPU_WriteMem(4 bytes @ 0xE0001004)
+T33E4 8924:649.472 - 7.414ms
+T33E4 8924:651.520 JLINK_IsOpen()
+T33E4 8924:651.520 - 0.023ms returns 0x01
+T33E4 8924:657.664 JLINK_Close()
+T33E4 8924:667.904 - 9.741ms
+T33E4 8924:667.904   
+T33E4 8924:667.904   Closed
