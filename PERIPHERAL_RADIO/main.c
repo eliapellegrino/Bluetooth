@@ -89,6 +89,7 @@
 #define DEVICE_NAME                     "DAJE_ELO"                         /**< Name of device. Will be included in the advertising data. */
 #define APP_BLE_OBSERVER_PRIO           3                                       /**< Application's BLE observer priority. You shouldn't need to modify this value. */
 #define APP_BLE_CONN_CFG_TAG            1                                       /**< A tag identifying the SoftDevice BLE configuration. */
+#define TX_POWER                        -20                                     /*Power of transmitted power*/
 // BLE ADVERTISING PARAMETERS
 #define APP_ADV_INTERVAL                64                                      /**< The advertising interval (in units of 0.625 ms; this value corresponds to 40 ms). */
 #define APP_ADV_DURATION                BLE_GAP_ADV_TIMEOUT_GENERAL_UNLIMITED   /**< The 0.625tising time-out (in units of seconds). When set to 0, we will never time out. */
@@ -175,8 +176,8 @@ static ble_gap_adv_data_t m_adv_data =
 
 // FLAGs
 static bool is_notificated = false;
-bool enable_uart = true;
-bool enable_pin_out = true;
+bool enable_uart = false;
+bool enable_pin_out = false;
 bool enable_pin_osc = false;
 
 bool uart_busy = false;
@@ -764,6 +765,10 @@ static void advertising_init(void) {
    //Setto la configurazione per poter poi iniziare a fare advertising (metto infatti m_adv_data che è il mio buffer che contiene i dati di adv e scan response)
    err_code = sd_ble_gap_adv_set_configure( & m_adv_handle, & m_adv_data, & adv_params);
    APP_ERROR_CHECK(err_code);
+
+  // Set power of antenna (in the connection this willl be the power used by this peripheral, connected to this m_adv_handle)
+  err_code = sd_ble_gap_tx_power_set(BLE_GAP_TX_POWER_ROLE_ADV, m_adv_handle, (int8_t) TX_POWER);
+  APP_ERROR_CHECK(err_code);
 }
 /**@brief Function for initializing services that will be used by the application.
  * In questa funzione dobbiamo mettere tutti i servizi che andremo ad usare nella nostra applicazione finale
