@@ -91,6 +91,7 @@ ma come uno scanner
 #define WRITE_BUTTON                    BSP_BUTTON_2                        /**< Button that will write to the LED characteristic of the peer */
 #define BUTTON_DETECTION_DELAY          APP_TIMER_TICKS(50)                 /**< Delay from a GPIOTE event until a button is reported as pushed (in number of timer ticks). */
 
+#define RX_POWER                        0                                   /*Power that peer will be used if not set by it*/
 // BLE SCANNING PARAMETER
 #define SCAN_INTERVAL                   160                              /**< Determines scan interval in units of 0.625 millisecond. */
 #define SCAN_WINDOW                     80                              /**< Determines scan window in units of 0.625 millisecond. */
@@ -214,8 +215,7 @@ static void ble_options_set(void)
   APP_ERROR_CHECK(err_code);
 
   // Set power of antenna
-  int8_t power = -20;
-  err_code = sd_ble_gap_tx_power_set(BLE_GAP_TX_POWER_ROLE_SCAN_INIT, 0, power);
+  err_code = sd_ble_gap_tx_power_set(BLE_GAP_TX_POWER_ROLE_SCAN_INIT, 0, (int8_t) RX_POWER);
   APP_ERROR_CHECK(err_code);
 }
 /////////////////////////////////////////////// END OTHER FUNCTIONS ///////////////////////////////////////////////////////
