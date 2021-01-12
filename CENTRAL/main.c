@@ -91,7 +91,7 @@ ma come uno scanner
 #define WRITE_BUTTON                    BSP_BUTTON_2                        /**< Button that will write to the LED characteristic of the peer */
 #define BUTTON_DETECTION_DELAY          APP_TIMER_TICKS(50)                 /**< Delay from a GPIOTE event until a button is reported as pushed (in number of timer ticks). */
 
-#define RX_POWER                        0                                   /*Power that peer will be used if not set by it*/
+#define RX_POWER                        -20                                   /*Power that peer will be used if not set by it*/
 // BLE SCANNING PARAMETER
 #define SCAN_INTERVAL                   160                              /**< Determines scan interval in units of 0.625 millisecond. */
 #define SCAN_WINDOW                     80                              /**< Determines scan window in units of 0.625 millisecond. */
@@ -123,7 +123,7 @@ NRF_BLE_GQ_DEF(m_ble_gatt_queue,                                /**< BLE GATT Qu
                NRF_SDH_BLE_CENTRAL_LINK_COUNT,
                NRF_BLE_GQ_QUEUE_SIZE);
 
-static char const m_target_periph_name[] = "DAJE_ELO";     /**< Name of the device we try to connect to. This name is searched in the scan report data*/
+static char const m_target_periph_name[] = "ATC_TX";     /**< Name of the device we try to connect to. This name is searched in the scan report data*/
 int8_t index = 0;           /*Indice per il toggle del PIN*/
 uint8_t received[MAX_PACKET_SIZE*SIZE_OF_ARRAY];
 static uint8_t tx_uart_buff[20];
@@ -135,8 +135,8 @@ bool uart_busy = false;
 bool last_packet = false;
 
 ///////////////////////////////////
-bool enable_uart = true;  /*Abilitare o meno la scirttura su seriale*/
-bool enable_pin_out_debug = true; /*Abilitare o meno il pin_out per il delay*/
+bool enable_uart = false;  /*Abilitare o meno la scirttura su seriale*/
+bool enable_pin_out_debug = false; /*Abilitare o meno il pin_out per il delay*/
 bool enable_reconstruction = false; /*Abilitare o meno la ricostruzione del pacchetto*/
 
 /*UART DEFINITION*/

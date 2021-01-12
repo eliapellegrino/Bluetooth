@@ -86,7 +86,7 @@
 #define PIN_OUT_POST                    NRF_GPIO_PIN_MAP(1,6)
 
 //BLE
-#define DEVICE_NAME                     "DAJE_ELO"                         /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                     "ATC_TX"                         /**< Name of device. Will be included in the advertising data. */
 #define APP_BLE_OBSERVER_PRIO           3                                       /**< Application's BLE observer priority. You shouldn't need to modify this value. */
 #define APP_BLE_CONN_CFG_TAG            1                                       /**< A tag identifying the SoftDevice BLE configuration. */
 #define TX_POWER                        0                                     /*Power of transmitted power*/
@@ -244,9 +244,10 @@ static void radio_evt_handler(bool radio_active)
       {
          // I due dispositivi sono connessi: se le notifiche sono attive, allora possoono scambiarsi i dati
 
-         //NRF_LOG_INFO("Count: %d", count);
+         
          if (is_notificated)
          {
+         NRF_LOG_INFO("Count: %d", count);
             if (!nrf_drv_timer_is_enabled(&TIMER_ACQUISITION))
             {
                TIMER_ACQUISITION.p_reg->TASKS_START = 1;
