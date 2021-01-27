@@ -89,7 +89,8 @@
 #define DEVICE_NAME                     "ATC_TX"                         /**< Name of device. Will be included in the advertising data. */
 #define APP_BLE_OBSERVER_PRIO           3                                       /**< Application's BLE observer priority. You shouldn't need to modify this value. */
 #define APP_BLE_CONN_CFG_TAG            1                                       /**< A tag identifying the SoftDevice BLE configuration. */
-#define TX_POWER                        0                                     /*Power of transmitted power*/
+#define TX_POWER                        8                                     /*Power of transmitted power*/
+#define ENABLE_2MBPS                    0
 // BLE ADVERTISING PARAMETERS
 #define APP_ADV_INTERVAL                64                                      /**< The advertising interval (in units of 0.625 ms; this value corresponds to 40 ms). */
 #define APP_ADV_DURATION                BLE_GAP_ADV_TIMEOUT_GENERAL_UNLIMITED   /**< The 0.625tising time-out (in units of seconds). When set to 0, we will never time out. */
@@ -100,7 +101,6 @@
 #define FIRST_CONN_PARAMS_UPDATE_DELAY  APP_TIMER_TICKS(2000)                  /**< Time from initiating event (connect or start of notification) to first time sd_ble_gap_conn_param_update is called (15 seconds). */
 #define NEXT_CONN_PARAMS_UPDATE_DELAY   APP_TIMER_TICKS(5000)                   /**< Time between each call to sd_ble_gap_conn_param_update after the first call (5 seconds). */
 #define MAX_CONN_PARAMS_UPDATE_COUNT    3                                       /**< Number of attempts before giving up the connection parameter negotiation. */
-
 //OTHERS
 #define BUTTON_DETECTION_DELAY          APP_TIMER_TICKS(50)                     /**< Delay from a GPIOTE event until a button is reported as pushed (in number of timer ticks). */
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
@@ -390,6 +390,7 @@ static void ble_evt_handler(ble_evt_t
       err_code = nrf_ble_qwr_conn_handle_assign( & m_qwr, m_conn_handle);
       APP_ERROR_CHECK(err_code);
       /*PHY UPDATE ALLA CONNESSIONE ALLA 2MBPS*/
+      #if ENABLE_2MBPS
       ble_gap_phys_t
       const phys = {
          .rx_phys = BLE_GAP_PHY_2MBPS,
@@ -397,6 +398,7 @@ static void ble_evt_handler(ble_evt_t
       };
       err_code = sd_ble_gap_phy_update(p_ble_evt -> evt.gap_evt.conn_handle, & phys);
       APP_ERROR_CHECK(err_code);
+      #endif
       break;
 
    case BLE_GAP_EVT_DISCONNECTED:

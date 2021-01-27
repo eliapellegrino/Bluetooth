@@ -95,7 +95,7 @@
 #define FIRST_CONN_PARAMS_UPDATE_DELAY  APP_TIMER_TICKS(2000)                  /**< Time from initiating event (connect or start of notification) to first time sd_ble_gap_conn_param_update is called (15 seconds). */
 #define NEXT_CONN_PARAMS_UPDATE_DELAY   APP_TIMER_TICKS(5000)                   /**< Time between each call to sd_ble_gap_conn_param_update after the first call (5 seconds). */
 #define MAX_CONN_PARAMS_UPDATE_COUNT    3                                       /**< Number of attempts before giving up the connection parameter negotiation. */
-
+#define ENABLE_2MBPS                    0
 //OTHERS
 #define BUTTON_DETECTION_DELAY          APP_TIMER_TICKS(50)                     /**< Delay from a GPIOTE event until a button is reported as pushed (in number of timer ticks). */
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
@@ -326,6 +326,7 @@ static void ble_evt_handler(ble_evt_t
       nrf_drv_rtc_enable( & rtc);
     }
     /*PHY UPDATE ALLA CONNESSIONE ALLA 2MBPS*/
+    #if ENABLE_2MBPS
     ble_gap_phys_t
     const phys = {
       .rx_phys = BLE_GAP_PHY_2MBPS,
@@ -333,6 +334,7 @@ static void ble_evt_handler(ble_evt_t
     };
     err_code = sd_ble_gap_phy_update(p_ble_evt -> evt.gap_evt.conn_handle, & phys);
     APP_ERROR_CHECK(err_code);
+    #endif
     break;
 
   case BLE_GAP_EVT_DISCONNECTED:
@@ -1008,7 +1010,7 @@ int main(void) {
   //peer_manager_init(). Ha bisogno anche di un pm_evt_handler per gestire i vari eventi che possono scaturire. Vedo qualsiasi altro esempio (tipo hrs) per vedere come usare il modulo Peer Manager
 
   // Start execution.
-  NRF_LOG_INFO("Custom example PERIPHERAL started");
+  //NRF_LOG_INFO("Custom example PERIPHERAL started");
   advertising_start();
 
   // Enter main loop.
