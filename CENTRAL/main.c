@@ -91,7 +91,7 @@ ma come uno scanner
 #define WRITE_BUTTON                    BSP_BUTTON_2                        /**< Button that will write to the LED characteristic of the peer */
 #define BUTTON_DETECTION_DELAY          APP_TIMER_TICKS(50)                 /**< Delay from a GPIOTE event until a button is reported as pushed (in number of timer ticks). */
 
-#define RX_POWER                        -20                                   /*Power that peer will be used if not set by it*/
+#define RX_POWER                        0                                   /*Power that peer will be used if not set by it*/
 // BLE SCANNING PARAMETER
 #define SCAN_INTERVAL                   160                              /**< Determines scan interval in units of 0.625 millisecond. */
 #define SCAN_WINDOW                     80                              /**< Determines scan window in units of 0.625 millisecond. */
@@ -135,8 +135,8 @@ bool uart_busy = false;
 bool last_packet = false;
 
 ///////////////////////////////////
-bool enable_uart = false;  /*Abilitare o meno la scirttura su seriale*/
-bool enable_pin_out_debug = false; /*Abilitare o meno il pin_out per il delay*/
+bool enable_uart = true;  /*Abilitare o meno la scirttura su seriale*/
+bool enable_pin_out_debug = true; /*Abilitare o meno il pin_out per il delay*/
 bool enable_reconstruction = false; /*Abilitare o meno la ricostruzione del pacchetto*/
 
 /*UART DEFINITION*/

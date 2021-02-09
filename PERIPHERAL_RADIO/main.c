@@ -89,8 +89,8 @@
 #define DEVICE_NAME                     "ATC_TX"                         /**< Name of device. Will be included in the advertising data. */
 #define APP_BLE_OBSERVER_PRIO           3                                       /**< Application's BLE observer priority. You shouldn't need to modify this value. */
 #define APP_BLE_CONN_CFG_TAG            1                                       /**< A tag identifying the SoftDevice BLE configuration. */
-#define TX_POWER                        8                                     /*Power of transmitted power*/
-#define ENABLE_2MBPS                    0
+#define TX_POWER                        8                                    /*Power of transmitted power*/
+#define ENABLE_2MBPS                    1
 // BLE ADVERTISING PARAMETERS
 #define APP_ADV_INTERVAL                64                                      /**< The advertising interval (in units of 0.625 ms; this value corresponds to 40 ms). */
 #define APP_ADV_DURATION                BLE_GAP_ADV_TIMEOUT_GENERAL_UNLIMITED   /**< The 0.625tising time-out (in units of seconds). When set to 0, we will never time out. */
@@ -176,8 +176,8 @@ static ble_gap_adv_data_t m_adv_data =
 
 // FLAGs
 static bool is_notificated = false;
-bool enable_uart = false;
-bool enable_pin_out = false;
+bool enable_uart = true;
+bool enable_pin_out = true;
 bool enable_pin_osc = false;
 
 bool uart_busy = false;
@@ -473,6 +473,7 @@ static void ble_evt_handler(ble_evt_t
      /// NRF_LOG_INFO("BLE_GATTS_EVT_HVN_TX_COMPLETE: %d, Delay: %d", now, now - radio_on_pre);
       //tmp = now;
       //memset(packet, 0, sizeof(packet));
+      NRF_LOG_INFO("PACKET SENT");
       if (enable_pin_out) {
          nrf_gpio_pin_toggle(PIN_OUT_POST);
       }
